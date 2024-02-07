@@ -377,6 +377,10 @@ li {
     text-align: center;
   }
 
+  .hero__title{
+    padding-bottom: 10rem;
+  }
+
   .about__title {
     font-size: 3rem;
   }
@@ -387,9 +391,31 @@ li {
   .about {
     flex-direction: column-reverse;
   }
+  .expertise__container {
+    flex-wrap: wrap;
+    margin: 0;
+  }
+  .expertise {
+      flex-basis: 100%;
+  }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .gallery__item {
+    flex-basis: 50%;
+  }
+
+  .footer__item:hover{
+    padding: 10rem 1rem;
+  }
+
+
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1024px) {
   .nav__list {
     display: flex;
   }
