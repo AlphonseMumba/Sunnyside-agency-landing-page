@@ -163,6 +163,7 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .description__container {
@@ -192,7 +193,7 @@ li {
 .about__link--color-pink {
   box-shadow: 0 8px 5px 1px var(--pink-color);
 }
-.about__image-img {
+.about__image-img__desktop {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -317,7 +318,7 @@ li {
   flex-basis: 25%;
 }
 
-.gallery__picture {
+.gallery__picture__desktop {
   width: 100%;
   height: 100%;
 }
@@ -345,6 +346,14 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 2%;
+}
+
+.footer__icon{
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+  margin-left: 30%;
 }
 
 .footer__item {
@@ -359,7 +368,7 @@ li {
   color: var(--white-color) !important;
 }
 
-/* ------------------ Responsive ---------------------  */
+/* ---------------------------------------------------------- Responsive Mobile 320x940 -------------------------------------------------------------  */
 
 @media screen and (max-width: 1024px) {
   .nav__list {
@@ -371,6 +380,9 @@ li {
   .nav {
     text-align: right;
   }
+
+  /*                            hero section                             */
+
   .hero {
     background-image: url(./../images/mobile/image-header.jpg);
     padding: 9rem 1rem;
@@ -381,6 +393,8 @@ li {
     padding-bottom: 10rem;
   }
 
+  /*                            About Section                           */
+
   .about__title {
     font-size: 3rem;
   }
@@ -388,15 +402,54 @@ li {
     font-size: 1.5rem;
   }
 
-  .about {
+  #about__first {
     flex-direction: column-reverse;
   }
+  
+  .about__description,
+  .about__image {
+    flex-basis: 100%;
+  }
+  .about__image-img__desktop{
+    display: none;
+  }
+
+  .about__image-img__mobile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /*                           expertise                               */
+
   .expertise__container {
     flex-wrap: wrap;
     margin: 0;
   }
   .expertise {
       flex-basis: 100%;
+  }
+
+  .expertise--bg-apple {
+    background-image: url(./../images/mobile/image-graphic-design.jpg);
+  }
+  .expertise--bg-orange {
+    background-image: url(./../images/mobile/image-photography.jpg);
+  }
+
+  .testimonie{
+    padding-bottom: 15%;
+  }
+
+  /*                              Galleries                           */
+
+  .gallery__picture__desktop{
+    display: none;
+  }
+
+  .gallery__picture__mobile {
+    width: 100%;
+    height: 100%;
   }
 
   .gallery {
@@ -408,10 +461,16 @@ li {
     flex-basis: 50%;
   }
 
+
+  /*                                 Footer                         */
+
   .footer__item:hover{
     padding: 10rem 1rem;
   }
 
+  .footer__list {
+    width: auto;
+  }
 
 }
 
@@ -420,6 +479,14 @@ li {
     display: flex;
   }
   .nav__hamburger {
+    display: none;
+  }
+
+  /*              Galeries                 */
+  .gallery__picture__mobile{
+    display: none;
+  }
+  .about__image-img__mobile{
     display: none;
   }
 }
